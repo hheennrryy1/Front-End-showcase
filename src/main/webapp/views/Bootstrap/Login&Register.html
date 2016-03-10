@@ -17,20 +17,20 @@
 	</style>
 	
 	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#signupclick").click (
+		$(document).ready(function() {
+			$("#signupclick").click(
 				function() {
-					$("#signup").attr("class","active");   
-					$("#signin").attr("class","");
-					$("#signindiv").css("display", "none");
-					$("#signupdiv").css("display", "");
+					$("#signup").addClass("active");   
+					$("#signin").removeClass("active");
+					$("#signindiv").hide();
+					$("#signupdiv").show();
 			});
 			$("#signinclick").click(
 				function() {
-					$("#signup").attr("class","");   
-					$("#signin").attr("class","active");
-					$("#signupdiv").css("display", "none");
-					$("#signindiv").css("display", "");
+					$("#signin").addClass("active");   
+					$("#signup").removeClass("active");
+					$("#signupdiv").hide();
+					$("#signindiv").show();
 				});
 		});
 	</script>
