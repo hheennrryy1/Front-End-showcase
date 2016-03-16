@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>选择器</title>
+	<meta charset="UTF-8">
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script>
+		$("document").ready(function() {
+			//选择所有元素
+			//$("*").css("background", "#ffbbaa");
+			
+			//选择所有span元素 和 id为div1的元素
+			$("span, #div1").css("background", "#ffbbaa");
+		})
+	</script>
+</head>
+<body>
+	<div id="div1">fdfd 
+		<span>sdsdfsfd</span>
+	</div>
+</body>
+</html>

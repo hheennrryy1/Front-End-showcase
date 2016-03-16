@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Hello World!以及对象互相转换 -->
+	<meta charset="UTF-8">
+	<title>Hello World!以及对象互相转换 </title>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("button").click(function() {
+				//获取一个jQuery对象，是一个数组对象
+				var $btn = $("button");
+				//alert($btn.length);
+				
+				//jQuery转换成DOM对象 加下标
+				alert($btn[0].firstChild.nodeValue);
+				
+				//DOM转换成jQuery对象
+				var btn = document.getElementById("btn");
+				alert($(btn).text());
+				
+			});
+		})
+	</script>
+</head>
+<body>
+	<button id="btn">clickme</button>
+	<button>clickme2</button>
+</body>
+</html>
