@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/user")
@@ -12,6 +13,7 @@ public class UserController {
 	@RequestMapping(value="/testAJAX", method=RequestMethod.POST)
 	@ResponseBody
 	public String testAJAX() {
+		ModelAndView mav = new ModelAndView("sssd");
 		System.out.println(++i);
 		return "test";
 	}
