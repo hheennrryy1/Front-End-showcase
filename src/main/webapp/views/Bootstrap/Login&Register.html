@@ -5,54 +5,40 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<!-- jQuery背景插件 -->
+	<script src="../../scripts/jquery.backstretch.min.js"></script>
+	<script src="../../scripts/BootStrap-Login&Register.js"></script>
 	<title>Insert title here</title>
 	<style>
-		.jumbotron {
-			background-color: white;
-		}
 		.navigator {
 			display: table;
 			margin: 0px auto;
 		}
+		
+		
+		body {
+			/*
+			background-image: url("../../images/Login&Register-bg1.jpg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: 100% 100%; 
+			*/
+		}
+		
 	</style>
-	
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$("#signupclick").click(
-				function() {
-					$("#signup").addClass("active");   
-					$("#signin").removeClass("active");
-					$("#signindiv").hide();
-					$("#signupdiv").show();
-			});
-			
-			$("#signinclick").click(
-				function() {
-					$("#signin").addClass("active");   
-					$("#signup").removeClass("active");
-					$("#signupdiv").hide();
-					$("#signindiv").show();
-				});
-			
-			$("#login-button").click(function() {
-				var url = "../../user/testAJAX"
-				var args = {
-						name:"Henry",
-						city:"Shenzhen"
-					};
-				$.post(url, args, function(data,status) {
-					alert(data);
-				});
-			});
-		});
-	</script>
-	
 </head>
 <body>
-	<div class="jumbotron text-center">
-		<h1>title<small>title</small></h1>
-		<p>first time to use bootstrap</p>
-	</div>
+	<header>
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<h1>这是一个登录注册页面</h1>
+					<h1>测试测试</h1>
+				</div>
+			</div>
+		</div>
+	</header>
 	
 	<div class="navigator">
 		<ul class="nav nav-pills">
@@ -126,5 +112,6 @@
 			</div>
 		</form>
 	</div>
+	
 </body>
 </html>
