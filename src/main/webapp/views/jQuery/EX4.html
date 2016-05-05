@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+		//$("#test-div").append("<p>一段来自JQuery的话</p>");
+		
+		var text = $('<p>一段来自JQuery的话</p>');
+		$("#test-div").append(text);
+	})
+</script>
+</head>
+<body>
+	<div id="test-div">
+		<p id="p1">一段话</p>
+	</div>
+</body>
+</html>

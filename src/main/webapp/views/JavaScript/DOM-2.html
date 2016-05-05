@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.red {
+		color: RED;
+	}
+</style>
+<script>
+	window.onload = function() {
+		var elementNode = document.getElementById("test-p");
+		
+		var textNode = document.createTextNode("text");
+		
+		elementNode.appendChild(textNode);
+		
+		/* var attrNode = document.createAttribute("class");
+		attrNode.value="red"
+		elementNode.setAttributeNode(attrNode); */
+		elementNode.setAttribute("class", "red");
+	}
+</script>
+</head>
+<body>
+	<p id="test-p">df</p>	
+</body>
+</html>
