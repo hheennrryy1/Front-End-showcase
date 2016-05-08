@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			var val = $('p').html();
+			alert("html():" + val);//<b>sfddf</b>
+			val = $('p').text();
+			alert("text():" + val);//sfddf
+			val = $('p').val();
+			alert("val():" + val);//空
+			$('p').html("<b>sdfsd</b>")
+		})
+	</script>
+<body>
+	<p><b>sfddf</b></p>
+</body>
+</html>

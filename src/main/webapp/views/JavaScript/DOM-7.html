@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script>
+
+	function insertAfter(newElement, targetElement) {
+		var parent = targetElement.parentNode;
+		if(parent.lastChild == targetElement) {
+			parent.appendChild(newElement);
+		}
+		else {
+			parent.insertBefore(newElement, targetElement.nextSibling);
+		}
+	}
+	
+	window.onload = function() {
+		var testp = document.getElementById("test-p");
+		var newElement = document.createElement("p");
+		var textNode = document.createTextNode("testttt");
+		newElement.appendChild(textNode);
+		insertAfter(newElement, testp);
+		//document.body.insertBefore(newElement, testp);
+	}
+</script>
+<body>
+	<p id="test-p">t</p>
+</body>
+</html>

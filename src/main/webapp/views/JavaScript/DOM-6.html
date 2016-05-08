@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	window.onload = function() {
+		var p = document.createElement("p");
+		var preTextNode = document.createTextNode("This is ");
+		p.appendChild(preTextNode);
+		
+		var elementNode = document.createElement("em");
+		var emTextNode = document.createTextNode("my ");
+		elementNode.appendChild(emTextNode);
+		p.appendChild(elementNode);
+		
+		var postTextNode = document.createTextNode("content.");
+		p.appendChild(postTextNode);
+		
+		document.body.appendChild(p);
+	}
+</script>
+</head>
+<body>
+	
+</body>
+</html>
