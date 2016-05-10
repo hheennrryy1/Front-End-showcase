@@ -2,6 +2,7 @@ package com.henry.test;
 
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -83,6 +84,7 @@ public class TestFreeMarker {
 	}
 	
 	@Test
+	@Ignore
 	public void test9() throws Exception {
 		Map<String, Integer> root = new HashMap<>();
 		root.put("age", 21);
@@ -90,4 +92,22 @@ public class TestFreeMarker {
 		Writer writer = new OutputStreamWriter(System.out);
 		template.process(root, writer);
 	}
+	
+	@Test
+	@Ignore
+	public void test10() throws Exception {
+		Template template = FreeMarkerUtil.getTemplate("string.ftl");
+		Writer writer = new OutputStreamWriter(System.out);
+		template.process(null, writer);
+	}
+	
+	@Test
+	public void test11() throws Exception {
+		Map<String, Date> root = new HashMap<>();
+		root.put("date", new Date());
+		Template template = FreeMarkerUtil.getTemplate("function.ftl");
+		Writer writer = new OutputStreamWriter(System.out);
+		template.process(root, writer);
+	}
+	
 }

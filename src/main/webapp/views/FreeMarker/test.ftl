@@ -5,12 +5,6 @@
 	<title>FreeMarker</title>
 </head>
 <body>
-	
-	henry
-	henry
-		hen..
-
-
-		hen.......
+	Hello,${name},age:${Session['age']}
 </body>
 </html>
