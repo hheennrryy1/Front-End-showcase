@@ -102,12 +102,28 @@ public class TestFreeMarker {
 	}
 	
 	@Test
+	@Ignore
 	public void test11() throws Exception {
 		Map<String, Date> root = new HashMap<>();
 		root.put("date", new Date());
 		Template template = FreeMarkerUtil.getTemplate("function.ftl");
 		Writer writer = new OutputStreamWriter(System.out);
 		template.process(root, writer);
+	}
+	
+	@Test
+	@Ignore
+	public void test12() throws Exception {
+		Template template = FreeMarkerUtil.getTemplate("seqFunction.ftl");
+		Writer writer = new OutputStreamWriter(System.out);
+		template.process(null, writer);
+	}
+	
+	@Test
+	public void test13() throws Exception {
+		Template template = FreeMarkerUtil.getTemplate("userFunction.ftl");
+		Writer writer = new OutputStreamWriter(System.out);
+		template.process(null, writer);
 	}
 	
 }

@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>FreeMarker</title>
+	<title>index</title>
 </head>
 <body>
-	<h1>sdfsdf</h1>
-	Hello,${name},age:${Session['age']}
+	${name}
 </body>
 </html>

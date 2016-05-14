@@ -23,6 +23,7 @@
     <bean id="freemarkerConfig"
           class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
         <property name="templateLoaderPath" value="/views/FreeMarker" />
+        <property name="defaultEncoding" value="UTF-8"></property>
         <property name="freemarkerSettings">
             <props>
                 <prop key="template_update_delay">0</prop>
@@ -38,6 +39,7 @@
 	<bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
 		<property name="order" value="1"></property>
 		<property name="suffix" value=".ftl"></property>
+		<property name="contentType" value="text/html;charset=UTF-8"></property>
 	</bean>
 	
 	<mvc:default-servlet-handler/>
